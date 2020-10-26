@@ -5,7 +5,7 @@ function composerBandeauPeriode (aCle) {
     if (aCle.value != 'vide') {
         for (var i=0; i < listePeriodes.length; i++) 	   
           if (listePeriodes[i].cleRess == aCle.value) {
-          console.log('https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png');
+//           console.log('https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png');
           document.getElementById('foto').src = 'https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png';
         }
         let x = null;
