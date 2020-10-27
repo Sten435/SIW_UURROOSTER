@@ -21,7 +21,6 @@ function composerBandeauPeriode (aCle) {
         }
         }
 
-        console.log(extras)
         extras.forEach(element => {
           lignes = element.lignes
         });
