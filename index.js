@@ -5,7 +5,7 @@ function composerBandeauPeriode (aCle) {
     if (aCle.value != 'vide') {
         for (var i=0; i < listePeriodes.length; i++) 	   
           if (listePeriodes[i].cleRess == aCle.value) {
-          console.log('https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png');
+          // console.log('https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png');
           document.getElementById('foto').src = 'https://webapps.scheppers-wetteren.be/lessenrooster/klassen/' + listePeriodes[i].codage + '.png';
         }
         let x = null;
@@ -20,6 +20,8 @@ function composerBandeauPeriode (aCle) {
             extras = x.renvois
           }
           }
+
+          console.log(extras)
           extras.forEach(element => {
             lignes = element.lignes
           });
@@ -34,7 +36,7 @@ function composerBandeauPeriode (aCle) {
               let newDiv = document.createElement("tr");
               let newDiv_ = document.createElement("td");
   
-              let arr = [lignes[index].numero, lignes[index].texte]
+              let arr = [lignes[index].numero + ' | ' + lignes[index].texte]
   
               for (let i = 0; i < arr.length; i++) {
                 newDiv_.innerHTML = arr[i];
